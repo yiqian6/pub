@@ -3,6 +3,7 @@
 
 特别说明：本项目不开发新算法，而是对已有工具的流程化整合与封装，旨在提高分析效率、可复现性和可读性。
 
+
 项目概述
 项目目标
 搭建端到端的自动化流程（数据预处理 → ARG 推断 → 时间定标 → 渗入检测 → 可视化）。
@@ -12,6 +13,7 @@
 提供 Conda 环境文件（environment.yml）记录所有依赖，确保跨平台可复现。
 
 提供结果可视化指南（群体 burden 柱状图、全基因组 Manhattan 图、IGV 交互式浏览）。
+
 
 数据来源
 数据集：1000 Genomes Project (Phase 3)
@@ -27,6 +29,7 @@
 数据来源：1000 Genomes FTP 或本地路径
 
 用户可根据需要替换为其他 VCF 文件（需符合相同格式要求）。
+
 
 环境与依赖
 操作系统与基础环境
@@ -66,6 +69,7 @@ matplotlib	≥3.5.0	生成可视化图表（折线图、柱状图等）	pip inst
 plotly（可选）	≥5.0.0	交互式 ARG 浏览器（Lorax）的支持库	pip install plotly
 
 所有依赖均可通过提供的 environment.yml 文件一键创建 Conda 环境（conda env create -f environment.yml）。
+
 
 完整分析流程
 步骤 1：数据准备
