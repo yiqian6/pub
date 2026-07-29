@@ -110,3 +110,5 @@ trace.py combine	合并所有节点片段，生成窗口 burden 表（trace_all_
 窗口大小：50 kb
 
 使用 TRACE_INCLUDE_DIR 传入 BED 文件限定区域，TRACE_WINDOW_SIZE=50000 提高分辨率。
+
+补充说明：在流程的后半部分，使用了cyvcf2，pysam，pybedtools，matplotlib，需要安装。
