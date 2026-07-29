@@ -32,23 +32,39 @@
 操作系统与基础环境
 工具	说明	安装方式
 Linux / WSL2	所有分析均在 Linux 环境下运行（推荐 Ubuntu 20.04+）	自行安装（Windows 用户可通过 WSL2 安装）
+
 Bash	脚本运行环境（#!/usr/bin/env bash）	系统自带（Linux/WSL）
+
 Conda	环境管理与包依赖管理（≥23.0.0）	Miniconda 安装指南
+
 R (≥4.0)	用于部分可视化（如 ibdmix.R）	conda install -c conda-forge r-base
+
 Python (3.10.x)	脚本运行环境（tsinfer、TRACE 等均基于 Python）	conda create -n gu python=3.10
+
 核心软件与 Python 库
 工具名称	版本建议	功能描述	安装方式
 bcftools	≥1.16	VCF 文件处理（拆分、排序、索引、过滤）	conda install -c bioconda bcftools
+
 vcf2zarr (bio2zarr)	≥0.2.0	将 VCF 转换为 Zarr 格式（.vcz），供 tsinfer 高效读取	pip install bio2zarr
+
 tsinfer	≥0.6.0	从基因型数据推断祖先重组图（ARG）	pip install tsinfer
+
 tsdate	≥0.3.0	对 ARG 进行时间定标，生成带时间的树序列	pip install tsdate
+
 tskit	≥0.5.0	处理树序列文件（加载、简化、保存）	pip install tskit
+
 TRACE	latest	从定标 ARG 中检测古人类基因渗入片段	pip install git+https://github.com/YulinZhang9806/trace.git
+
 zarr	≥2.13.0	处理 Zarr 格式数据（添加 REF_allele 等）	pip install zarr
+
 numpy	≥1.23.0	Python 数值计算（辅助脚本）	pip install numpy
+
 pandas	≥1.5.0	数据处理与表格操作	pip install pandas
+
 matplotlib	≥3.5.0	生成可视化图表（折线图、柱状图等）	pip install matplotlib
+
 plotly（可选）	≥5.0.0	交互式 ARG 浏览器（Lorax）的支持库	pip install plotly
+
 所有依赖均可通过提供的 environment.yml 文件一键创建 Conda 环境（conda env create -f environment.yml）。
 
 完整分析流程
