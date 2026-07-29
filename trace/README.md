@@ -28,7 +28,7 @@
 
 用户可根据需要替换为其他 VCF 文件（需符合相同格式要求）。
 
-⚙️ 环境与依赖
+环境与依赖
 操作系统与基础环境
 工具	说明	安装方式
 Linux / WSL2	所有分析均在 Linux 环境下运行（推荐 Ubuntu 20.04+）	自行安装（Windows 用户可通过 WSL2 安装）
@@ -51,7 +51,7 @@ matplotlib	≥3.5.0	生成可视化图表（折线图、柱状图等）	pip inst
 plotly（可选）	≥5.0.0	交互式 ARG 浏览器（Lorax）的支持库	pip install plotly
 所有依赖均可通过提供的 environment.yml 文件一键创建 Conda 环境（conda env create -f environment.yml）。
 
-🔬 完整分析流程
+完整分析流程
 步骤 1：数据准备
 下载 1000 Genomes 的 VCF 文件（chr22.vcf.gz）及索引（.tbi）。
 
